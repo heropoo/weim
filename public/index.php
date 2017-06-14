@@ -30,7 +30,7 @@ $server_url = $config['server_url'];
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WeiIM</title>
+    <title>WeIM</title>
     <style>
         * {
             margin: 0;
