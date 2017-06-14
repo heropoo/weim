@@ -6,15 +6,19 @@
  * Time: 10:08
  */
 
-session_start();
+require '../vendor/autoload.php';
 
-//login
-if (!empty($_POST['username'])) {
-    $_SESSION['username'] = $_POST['username'];
+$request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+
+$request->setSession(new \Symfony\Component\HttpFoundation\Session\Session());
+
+$session = $request->getSession();
+
+if (!empty($request->get('username', ''))) {
+    $session->set('username', $request->get('username'));
 }
 
-// check login
-$username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+$username = $session->get('username', '');
 if (empty($username)) {
     echo '<form action="" method="post">
 username:<input type="text" name="username" value="" required>
