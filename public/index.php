@@ -114,6 +114,12 @@ $server_url = $config['server_url'];
         connect();
     });
 
+    $('#myTextArea').bind('keydown',function(e){
+        if(e.keyCode==13){
+            send_msg();
+        }
+    });
+
     function send_msg() {
         var content = $("#myTextArea").html();
         console.log(content);
