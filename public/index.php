@@ -27,6 +27,8 @@ username:<input type="text" name="username" value="" required>
     exit;
 }
 
+$config = require '../config/app.php';
+$server_url = $config['server_url'];
 
 ?><!doctype html>
 <html lang="en">
@@ -91,19 +93,17 @@ username:<input type="text" name="username" value="" required>
 <body>
 <div id="box">
     <ul>
-        <li class="sys_msg msg">小娜：你好<?= $username ?>，欢迎来到WeiIM聊天室，请先点击连接</li>
+        <li class="sys_msg msg">小娜：你好<?= $username ?>，欢迎来到WeiIM聊天室~</li>
         <!--<li class="my_msg msg">我：你好</li>-->
     </ul>
 </div>
 <div id="panel">
     <p>
 <!--        <textarea name="content" id="content" style="width: 510px;height: 100px;padding: 5px;"></textarea>-->
-    <div id="myTextArea" contenteditable="true" style="margin-top: 5px;margin-bottom: 5px;">
-        <img height="30" src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png">1111
-    </div>
+        <div id="myTextArea" contenteditable="true" style="margin-top: 5px;margin-bottom: 5px;"></div>
     </p>
     <p style="width: 522px;overflow: hidden;">
-        <button type="button" onclick="connect();">连接</button>
+        <button type="button" onclick="connect();">重新连接</button>
         <button type="button" onclick="disconnect();">断开连接</button>
         <button type="button" onclick="get_state();">查看连接状态</button>
         <button type="button" onclick="send_msg();" style="float: right;margin-right: 0">发送</button>
@@ -113,6 +113,11 @@ username:<input type="text" name="username" value="" required>
 
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
 <script>
+
+    $(function(){
+        connect();
+    });
+
     function send_msg() {
         var content = $("#myTextArea").html();
         console.log(content);
@@ -154,7 +159,7 @@ username:<input type="text" name="username" value="" required>
             return false;
         }
         try {
-            ws = new WebSocket("ws://127.0.0.1:8001?username=<?=$username?>");//连接服务器
+            ws = new WebSocket("<?=$server_url?>?username=<?=$username?>");//连接服务器
             ws.onopen = function (event) {
                 log_sys_msg("已经与服务器建立了连接 当前连接状态：" + this.readyState);
             };
