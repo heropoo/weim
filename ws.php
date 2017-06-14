@@ -23,8 +23,23 @@ $ws->on('open', function(swoole_websocket_server $ws, swoole_http_request $reque
 
     echo "server: handshake success with fd{$request->fd}\n";
 
+    //通知其他童鞋们
+    $list = userList();
+    foreach($list as $v){
+        if($v['fd'] == $request->fd){
+            continue;
+        }
+        $res = [
+            'username'=>'小娜',
+            'msg'=>"您的好友\"{$request->get['username']}\"已上线，和TA聊聊吧~"
+        ];
+        $ws->push($v['fd'], json_encode($res));
+    }
+
+    //保存用户
     saveUser($request->fd, $request->get['username']);
 
+    //小娜通知
     $arr = [
         'msg'=>"Hello ".$request->get['username'],
         'username'=>'小娜'
@@ -48,6 +63,22 @@ $ws->on('message', function(swoole_websocket_server $ws, swoole_websocket_frame 
 
 $ws->on('close', function(swoole_websocket_server $ws, $fd){
     echo "client {$fd} closed\n";
+
+    $username = getUsernameByFd($fd);
+
+    removeUserByFd($fd);
+
+    $list = userList();
+    foreach($list as $v){
+        if($v['fd'] == $fd){
+            continue;
+        }
+        $res = [
+            'username'=>'小娜',
+            'msg'=>"您的好友\"$username\"已下线"
+        ];
+        $ws->push($v['fd'], json_encode($res));
+    }
 });
 
 echo "Swoole Websocket Server listening on $ip:$port".PHP_EOL;
@@ -77,5 +108,13 @@ function saveUser($fd, $username){
     $user['username'] = $username;
     $user['fd'] = $fd;
     $list['fd_'.$fd] = $user;
+    file_put_contents('runtime/user_list.json', json_encode($list));
+}
+
+function removeUserByFd($fd){
+    $list = userList();
+    if(isset($list['fd_'.$fd])){
+        unset($list['fd_'.$fd]);
+    }
     file_put_contents('runtime/user_list.json', json_encode($list));
 }
