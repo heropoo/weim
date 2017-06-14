@@ -1,0 +1,24 @@
+{
+    "name": "heropoo/wei-im",
+    "description": "im",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Heropoo",
+            "email": "aiyouyou1000@163.com"
+        }
+    ],
+    "require": {
+        "symfony/http-foundation": "^3.3",
+        "symfony/cache": "^3.3"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    },
+    "require-dev": {
+        "eaglewu/swoole-ide-helper": "dev-master"
+    }
+}

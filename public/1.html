@@ -1,0 +1,94 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+
+<script>
+    //创建一个socket实例
+    var ws = new WebSocket('ws://127.0.0.1:8001');
+
+//    //打开socket
+//    socket.onopen = function(event){
+//        //发送一个初始化消息
+//        socket.send("I am a client and I am listening!");
+//
+//        //监听消息
+//        socket.onmessage = function(event){
+//            console.log('Client received a message:', event);
+//        };
+//
+//        //监听socket的关闭
+//        socket.onclose = function(event){
+//            console.log('Client notified socket has closed', event);
+//        };
+//
+//        //关闭socket
+//        socket.close();
+//    };
+
+    ws.onopen = function(event){
+        console.log("已经与服务器建立了连接\r\n当前连接状态："+this.readyState);
+    };
+
+    ws.onmessage = function(event){
+        console.log("接收到服务器发送的数据：\r\n"+event.data);
+    };
+    ws.onclose = function(event){
+        console.log("已经与服务器断开连接\r\n当前连接状态："+this.readyState);
+    };
+
+    ws.onerror = function(event){
+        alert("WebSocket异常！");
+    };
+
+</script>
+</body>
+</html>-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web sockets test</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+    <script type="text/javascript">
+        var ws;
+        function ToggleConnectionClicked() {
+            try {
+                ws = new WebSocket("ws://127.0.0.1:8001");//连接服务器
+                ws.onopen = function(event){alert("已经与服务器建立了连接\r\n当前连接状态："+this.readyState);};
+                ws.onmessage = function(event){alert("接收到服务器发送的数据：\r\n"+event.data);};
+                ws.onclose = function(event){alert("已经与服务器断开连接\r\n当前连接状态："+this.readyState);};
+                ws.onerror = function(event){alert("WebSocket异常！");};
+            } catch (ex) {
+                alert(ex.message);
+            }
+        }
+
+        function SendData() {
+            try{
+                var content = document.getElementById("content").value;
+                if(content){
+                    ws.send(content);
+                }
+
+            }catch(ex){
+                alert(ex.message);
+            }
+        }
+
+        function seestate(){
+            alert(ws.readyState);
+        }
+
+    </script>
+</head>
+<body>
+<button id='ToggleConnection' type="button" onclick='ToggleConnectionClicked();'>连接服务器</button><br /><br />
+<textarea id="content" ></textarea>
+<button id='ToggleConnection' type="button" onclick='SendData();'>发送我的名字：beston</button><br /><br />
+<button id='ToggleConnection' type="button" onclick='seestate();'>查看状态</button><br /><br />
+
+</body>
+</html>
