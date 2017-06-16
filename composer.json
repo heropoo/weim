@@ -12,6 +12,11 @@
         "symfony/http-foundation": "^3.3",
         "symfony/cache": "^3.3"
     },
+    "autoload":{
+        "files":[
+            "libraries/helpers.php"
+        ]
+    },
     "repositories": {
         "packagist": {
             "type": "composer",
