@@ -11,6 +11,19 @@ $port = 8001;
 
 $ws = new swoole_websocket_server($ip, $port);
 
+$argv = $_SERVER['argv'];
+
+unset($argv[0]);
+
+if(in_array('-d', $argv)){
+    //设置server运行时的各项参数
+    $ws->set(array(
+        'daemonize' => true, //是否作为守护进程
+    ));
+}
+
+
+
 //设置server运行时的各项参数
 //$ws->set(array(
 //    'daemonize' => true, //是否作为守护进程
@@ -84,6 +97,8 @@ $ws->on('close', function(swoole_websocket_server $ws, $fd){
 echo "Swoole Websocket Server listening on $ip:$port".PHP_EOL;
 echo 'Waiting for client to connect...';
 $ws->start();
+
+var_dump($ws->manager_pid);
 
 function dealMsg($fd, $data){
     $username = getUsernameByFd($fd);
