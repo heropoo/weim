@@ -1,0 +1,7 @@
+RewriteEngine on
+# 如果请求的是真实存在的文件或目录，直接访问
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# 如果请求的不是真实文件或目录，分发请求至 index.php
+#RewriteRule . index.php
+RewriteRule ^(.*)$ index.php/$1 [QSA,L]
