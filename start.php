@@ -11,7 +11,7 @@ require_once __DIR__.'/vendor/autoload.php';
 use Workerman\Worker;
 
 // Create a Websocket server
-$ws_worker = new Worker("ws://0.0.0.0:8001");
+$ws_worker = new Worker("ws://0.0.0.0:8801");
 
 // 4 processes
 $ws_worker->count = 4;
