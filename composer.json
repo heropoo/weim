@@ -9,8 +9,7 @@
         }
     ],
     "require": {
-        "symfony/http-foundation": "^3.3",
-        "symfony/cache": "^3.3"
+        "workerman/workerman": "^3.5"
     },
     "autoload":{
         "psr-4":{
@@ -20,14 +19,5 @@
         "files":[
             "libraries/helpers.php"
         ]
-    },
-    "repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
-        }
-    },
-    "require-dev": {
-        "eaglewu/swoole-ide-helper": "dev-master"
     }
 }

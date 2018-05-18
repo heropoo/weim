@@ -9,8 +9,7 @@
 
 
 ### 开发环境
-
-    PHP >= 5.4
-    php-swoole 扩展 建议使用最新版
-    
-项目开始了 加油！
+> * PHP >= 5.4
+> * A POSIX compatible operating system (Linux, OSX, BSD)
+> * POSIX and PCNTL extensions for PHP
+> * 使用workerman框架开发
