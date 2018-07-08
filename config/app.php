@@ -7,5 +7,11 @@
  */
 
 return [
-    'server_url'=>'ws://127.0.0.1:8001'
+    'server'=>[
+        'protocol'=>'ws',
+        'host'=>'',
+        'port'=>'',
+
+    ],
+    //'server_url'=>'ws://127.0.0.1:8001'
 ];

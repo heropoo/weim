@@ -10,7 +10,8 @@
     ],
     "require": {
         "symfony/http-foundation": "^3.3",
-        "symfony/cache": "^3.3"
+        "symfony/cache": "^3.3",
+        "vlucas/phpdotenv": "^2.5"
     },
     "autoload":{
         "psr-4":{
