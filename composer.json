@@ -9,8 +9,7 @@
         }
     ],
     "require": {
-        "symfony/http-foundation": "^3.3",
-        "vlucas/phpdotenv": "^2.5"
+        "heropoo/moon": "^0.2"
     },
     "autoload":{
         "psr-4":{

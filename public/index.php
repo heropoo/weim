@@ -1,6 +1,9 @@
 <?php
-
+/**
+ * weim
+ */
 require '../vendor/autoload.php';
 
-$dotenv = new Dotenv\Dotenv(dirname(__DIR__));
-$dotenv->load();
+$app = new \Moon\Application(dirname(__DIR__));
+$app->run();
+
