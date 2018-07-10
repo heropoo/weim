@@ -1,4 +1,4 @@
+.env
 .idea/
 vendor/
 composer.lock
-rumtime/user_list.json

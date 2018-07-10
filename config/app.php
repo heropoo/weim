@@ -9,9 +9,8 @@
 return [
     'server'=>[
         'protocol'=>'ws',
-        'host'=>'',
-        'port'=>'',
+        'host'=>'127.0.0.1',
+        'port'=>'8001',
 
     ],
-    //'server_url'=>'ws://127.0.0.1:8001'
 ];

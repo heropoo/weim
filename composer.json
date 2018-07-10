@@ -1,6 +1,6 @@
 {
     "name": "heropoo/weim",
-    "description": "im",
+    "description": "webim",
     "license": "MIT",
     "authors": [
         {
@@ -10,7 +10,6 @@
     ],
     "require": {
         "symfony/http-foundation": "^3.3",
-        "symfony/cache": "^3.3",
         "vlucas/phpdotenv": "^2.5"
     },
     "autoload":{
@@ -21,12 +20,6 @@
         "files":[
             "libraries/helpers.php"
         ]
-    },
-    "repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
-        }
     },
     "require-dev": {
         "eaglewu/swoole-ide-helper": "dev-master"
