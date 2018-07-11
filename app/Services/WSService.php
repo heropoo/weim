@@ -8,6 +8,7 @@
 namespace App\Services;
 
 use App\Models\WxAccountFans;
+use Moon\Config\Config;
 use Swoole\Http\Request;
 use Swoole\WebSocket\Frame;
 use Swoole\WebSocket\Server;
@@ -22,7 +23,7 @@ class WSService
     public function run()
     {
         $ip = '0.0.0.0';
-        $port = config('app.ws_server.port');
+        $port = 8001;
 
         $ws = new Server($ip, $port);
 
