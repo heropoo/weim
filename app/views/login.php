@@ -16,11 +16,9 @@
     <link href="<?=asset('assets/css/style.min.css')?>" rel="stylesheet">
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html"/><![endif]-->
-    <script>if (window.top !== window.self) {
-            window.top.location = window.location;
-        }</script>
+    <script>if (window.top !== window.self) {window.top.location = window.location;}</script>
     <style>
-        .logo-name{margin-left: -80px;}
+
     </style>
 </head>
 
@@ -30,12 +28,12 @@
     <div>
         <div>
 
-            <h1 class="logo-name">WeIM</h1>
+            <h1 class="logo-name">We</h1>
 
         </div>
         <h3>欢迎使用 WeIM</h3>
 
-        <form class="m-t" role="form" action="index.html">
+        <form class="m-t" role="form" action="">
             <div class="form-group">
                 <input type="email" class="form-control" placeholder="用户名" required="">
             </div>
@@ -58,6 +56,8 @@
 </div>
 <script src="<?=asset('plugins/jquery/2.2.1/jquery.min.js')?>"></script>
 <script src="<?=asset('plugins/bootstrap/3.3.7/js/bootstrap.min.js')?>"></script>
-</body>
+<script>
 
+</script>
+</body>
 </html>

@@ -8,4 +8,7 @@
 
 return [
     'debug' => env('DEBUG', false),
+    'url' => env('APP_URL', 'http://localhost'),
+    'timezone' => 'Asia/Shanghai',
+
 ];
