@@ -14,4 +14,8 @@ class IndexController extends Controller
     public function index(){
         return 'index - index';
     }
+
+    public function test(){
+        var_dump(\Moon::$app->get('db'));
+    }
 }

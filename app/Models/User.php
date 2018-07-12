@@ -7,7 +7,10 @@
  */
 namespace App\Models;
 
-class User
-{
+use Moon\Db\Table;
 
+class User extends Table
+{
+    protected $tableName = '{{user}}';
+    protected $primaryKey = 'id';
 }

@@ -10,5 +10,8 @@ return [
     'debug' => env('DEBUG', false),
     'url' => env('APP_URL', 'http://localhost'),
     'timezone' => 'Asia/Shanghai',
-
+    'components'=>[
+        'db' => include __DIR__.'/db.php'
+    ],
+    'bootstrap'=>['db']
 ];

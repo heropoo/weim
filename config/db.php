@@ -7,11 +7,12 @@
  */
 
 return [
-    'dsn' => 'mysql:host=localhost;dbname=test;port=3306;charset=utf8',
+    'class'=>\Moon\Db\Connection::class,
+    'dsn' => 'mysql:host=localhost;dbname=test;port=3306',
     'username' => 'root',
     'password' => 'root',
     'charset' => 'utf8mb4',
-    'tablePrefix' => '',
+    'tablePrefix' => 'we_',
     'emulatePrepares' => false,
     'options' => [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION

@@ -17,6 +17,8 @@ $router->group(['middleware'=>\App\Middleware\SessionStart::class], function ($r
      */
     $router->get('/', 'IndexController::index')->name('index');
 
+    $router->get('test', 'IndexController::test');
+
     $router->get('login', 'UserController::login');
     $router->post('login', 'UserController::post_login');
     $router->get('logout', 'UserController::logout');
