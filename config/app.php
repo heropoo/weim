@@ -7,9 +7,5 @@
  */
 
 return [
-    'ws_server'=>[
-        'protocol'=>'ws',
-        'host'=>'127.0.0.1',
-        'port'=>'8001',
-    ],
+    'debug' => env('DEBUG', false),
 ];

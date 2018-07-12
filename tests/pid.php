@@ -7,7 +7,7 @@
  */
 
 $title = "My Amazing PHP Script";
-$pid = getmypid(); // you can use this to see your process title in ps
+echo $pid = getmypid(); // you can use this to see your process title in ps
 
 if (!cli_set_process_title($title)) {
     echo "Unable to set process title for PID $pid...\n";
