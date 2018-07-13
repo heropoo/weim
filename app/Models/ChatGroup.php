@@ -2,13 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: ttt
- * Date: 2018/7/12
- * Time: 23:29
+ * Date: 2018/7/13
+ * Time: 23:38
  */
+
 namespace App\Models;
 
-class User extends Model
+
+class ChatGroup extends Model
 {
-    protected $tableName = '{{user}}';
+    protected $tableName = '{{chat_group}}';
     protected $primaryKey = 'id';
 }

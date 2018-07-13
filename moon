@@ -1,4 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-//todo
+require 'vendor/autoload.php';
+
+$app = new \Moon\Application(__DIR__);
+$app->runConsole();
