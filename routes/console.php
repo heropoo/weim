@@ -6,6 +6,5 @@
  * Time: 0:20
  */
 
-Moon::command('test::user', function (){
-    echo 'test::user';
-});
+Moon::command('ws-server::run', 'WSServerCommand::run', 'Run Websocket Server');
+Moon::command('ws-server::test', 'WSServerCommand::test', 'Run Websocket Server test');

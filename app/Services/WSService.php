@@ -16,20 +16,12 @@ class WSService
 {
     protected $user_list = [];
 
-    /**
-     * Execute the console command.
-     *
-     */
-    public function run()
-    {
-        $ip = '0.0.0.0';
-        $port = 8001;
 
+    public function run($ip, $port, $daemon = false)
+    {
         $ws = new Server($ip, $port);
 
-        $argv = $_SERVER['argv'];
-
-        if(in_array('-d', $argv)){
+        if($daemon){
             //设置server运行时的各项参数
             $ws->set(array(
                 'daemonize' => true, //是否作为守护进程
