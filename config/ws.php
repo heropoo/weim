@@ -7,8 +7,8 @@
  */
 return [
     'server' => [
-        'protocol' => 'ws',
-        'host' => '127.0.0.1',
-        'port' => '8001',
+        'protocol' => env('WS_PROTOCOL', 'ws'),
+        'host' => env('WS_HOST', '127.0.0.1'),
+        'port' => env('WS_PORT', '8001'),
     ],
 ];

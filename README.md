@@ -1,16 +1,17 @@
-# weIM
+# WeIM
 
-### 运行
+### 运行websocket服务
 1. 在终端执行 
-
-    php websocket_server.php
+```sh
+php moon ws-server::run
+```
     
-2. 直接通过web服务器访问到 `public/index.php`。请修改 `config/app.php` 中的 `ws_server` 项
+2. web服务器入口到 `public/index.php`。请修改 `config/ws.php` 中的 `server` 项
 
 
 ### 开发环境
 
-    PHP >= 5.4
+    PHP >= 7.0
     php-swoole 扩展 建议使用最新版
     
 项目开始了 加油！

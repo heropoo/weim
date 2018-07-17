@@ -13,7 +13,7 @@
     <link href="<?=asset('plugins/bootstrap/3.3.7/css/bootstrap.min.css')?>" rel="stylesheet">
     <link href="<?=asset('plugins/font-awesome/4.7.0/css/font-awesome.min.css')?>" rel="stylesheet">
 
-    <link href="<?=asset('assets/css/style.min.css')?>" rel="stylesheet">
+    <link href="<?=asset('assets/css/login.css')?>" rel="stylesheet">
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html"/><![endif]-->
     <script>if (window.top !== window.self) {window.top.location = window.location;}</script>
