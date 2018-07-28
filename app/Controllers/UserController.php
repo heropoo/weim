@@ -9,15 +9,13 @@
 namespace App\Controllers;
 
 
+use App\Models\Model;
+use App\Models\User;
 use App\Services\AuthService;
 use Moon\Controller;
 
 class UserController extends Controller
 {
-    public function index(){
-        echo 'user - index';
-    }
-
     public function login(){
         return $this->render('login');
     }
@@ -31,5 +29,44 @@ class UserController extends Controller
     public function logout(){
         AuthService::logout();
         return redirect('login');
+    }
+
+    public function register(){
+        return $this->render('register');
+    }
+
+    public function post_register(){
+        $email = request('email', '');
+        $password = request('password', '');
+        $user = User::find()->where('email=? and status=0', [$email])->fetch();
+        if(!empty($user)){
+            return [
+                'ret'=>10010,
+                'msg'=>'当前Email已被注册'
+            ];
+        }
+
+        $salt = AuthService::salt();
+        $password = AuthService::encrypt($password, $salt);
+
+        $username = $nickname = strstr($email, '@', true);
+
+        $bool = (new User())->insert([
+            'username'=>$username,
+            'nickname'=>$nickname,
+            'email'=>$email,
+            'password'=>$password,
+            'salt'=>$salt
+        ]);
+
+        if($bool){
+            return [
+                'ret'=>200,
+            ];
+        }
+        return [
+            'ret'=>10500,
+            'msg'=>'注册失败'
+        ];
     }
 }

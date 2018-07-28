@@ -31,7 +31,7 @@
             <h1 class="logo-name">We</h1>
 
         </div>
-        <h3>欢迎使用 WeIM</h3>
+        <h3>欢迎使用WeIM聊天室</h3>
 
         <form class="m-t" role="form" action="" id="loginForm">
             <div class="form-group">
@@ -43,11 +43,11 @@
             <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
 
             <p class="text-muted text-center">
-                <a href="#">
+                <!--<a href="#">
                     <small>忘记密码了？</small>
                 </a>
-                |
-                <a href="">注册一个新账号</a>
+                |-->
+                <a href="<?= url('register')?>">注册一个新账号</a>
             </p>
 
         </form>
@@ -60,7 +60,7 @@
         var data = $(this).serialize();
         $.post('<?= url('login')?>', data, function(res){
             if(res.ret == 200){
-                window.location.href = '<?= url('user')?>';
+                window.location.href = '<?= url('/')?>';
             }else{
                 alert(res.msg);
             }

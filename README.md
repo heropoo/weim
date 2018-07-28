@@ -10,13 +10,12 @@ php moon ws-server::run
 
 
 ### 开发环境
-
-    PHP >= 7.0
-    php-swoole 扩展 建议使用最新版
+* PHP >= 7.0
+* [php-swoole扩展](https://github.com/swoole/swoole-src)
+* [Moon框架](https://github.com/heropoo/moon-app) 
     
 项目开始了 加油！
 
 TODO
-* 框架
 * 聊天页面
 * 聊天记录

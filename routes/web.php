@@ -15,18 +15,18 @@ $router->group(['middleware'=>\App\Middleware\SessionStart::class], function ($r
     /**
      * @var \Moon\Routing\Router $router
      */
-    $router->get('/', 'IndexController::index')->name('index');
-
     $router->get('test', 'IndexController::test');
 
+    $router->get('register', 'UserController::register');
+    $router->post('register', 'UserController::post_register');
     $router->get('login', 'UserController::login');
     $router->post('login', 'UserController::post_login');
     $router->get('logout', 'UserController::logout');
 
-    $router->group(['prefix'=>'user', 'middleware'=>\App\Middleware\Auth::class], function ($router){
+    $router->group(['middleware'=>\App\Middleware\Auth::class], function ($router){
         /**
          * @var \Moon\Routing\Router $router
          */
-        $router->get('', 'UserController::index')->name('user');
+        $router->get('/', 'IndexController::index')->name('index');
     });
 });
