@@ -18,6 +18,10 @@ class Model extends Table
         $db = \Moon::$app->get('db');
         parent::__construct($tableName, $db);
     }
+
+    public static function model(){
+        return new static();
+    }
 //    public static function __callStatic($name, $arguments)
 //    {
 //        if(in_array($name, ['select', 'join', 'union', 'where', 'insert', 'update', 'delete'])){

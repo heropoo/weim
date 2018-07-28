@@ -51,7 +51,7 @@ class UserController extends Controller
 
         $username = $nickname = strstr($email, '@', true);
 
-        $bool = (new User())->insert([
+        $bool = User::model()->insert([
             'username'=>$username,
             'nickname'=>$nickname,
             'email'=>$email,
