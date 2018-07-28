@@ -49,7 +49,7 @@ class AuthService
                 'msg' => '密码不能为空'
             ];
         }
-        $user = User::find()->where('email=?', [$username])->fetch();
+        $user = User::find()->where('email=? and status=0', [$username])->fetch();
         if (empty($user)) {
             return [
                 'ret' => 10402,
