@@ -27,6 +27,7 @@ $router->group(['middleware'=>\App\Middleware\SessionStart::class], function ($r
         /**
          * @var \Moon\Routing\Router $router
          */
-        $router->get('/', 'IndexController::index')->name('index');
+        $router->get('', 'IndexController::index');
+        $router->get('chat', 'IndexController::chat');
     });
 });

@@ -15,6 +15,10 @@ class IndexController extends Controller
         return $this->render('index');
     }
 
+    public function chat(){
+        return $this->render('chat');
+    }
+
     public function test(){
         var_dump(\Moon::$app->get('db'));
     }
