@@ -58,6 +58,200 @@
             </span>
         </p>
     </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                飞流直下三千尺
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li><li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                飞流直下三千尺
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li><li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                飞流直下三千尺
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                飞流直下三千尺
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li><li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                飞流直下三千尺
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li><li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                飞流直下三千尺
+            </span>
+        </p>
+    </li>
+    <li class="right_messages">
+        <div class="header_img">
+            <img src="http://www.qqzhi.com/uploadpic/2015-01-31/114503444.jpg" title="头像" alt="头像">
+        </div>
+        <span class="min_icon"></span>
+        <p class="messages_content">
+            <span>
+                你好呀！
+            </span>
+        </p>
+    </li>
 </section>
 <footer class="footer">
     <div class="left_input">
