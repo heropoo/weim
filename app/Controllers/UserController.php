@@ -38,7 +38,7 @@ class UserController extends Controller
     public function post_register(){
         $email = request('email', '');
         $password = request('password', '');
-        $user = User::find()->where('email=? and status=0', [$email])->fetch();
+        $user = User::model()->where('email=? and status=0', [$email])->fetch();
         if(!empty($user)){
             return [
                 'ret'=>10010,
