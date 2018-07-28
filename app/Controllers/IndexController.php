@@ -12,7 +12,7 @@ use Moon\Controller;
 class IndexController extends Controller
 {
     public function index(){
-        return 'index - index';
+        return $this->render('index');
     }
 
     public function test(){

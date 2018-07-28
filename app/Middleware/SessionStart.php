@@ -7,8 +7,8 @@
  */
 namespace App\Middleware;
 
-use \Symfony\Component\HttpFoundation\Request;
-use \Closure;
+use Symfony\Component\HttpFoundation\Request;
+use Closure;
 
 class SessionStart
 {

@@ -33,15 +33,14 @@
         </div>
         <h3>欢迎使用 WeIM</h3>
 
-        <form class="m-t" role="form" action="">
+        <form class="m-t" role="form" action="" id="loginForm">
             <div class="form-group">
-                <input type="email" class="form-control" placeholder="用户名" required="">
+                <input type="email" name="email" class="form-control" placeholder="电子邮件地址" required>
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="密码" required="">
+                <input type="password" name="password" class="form-control" placeholder="密码" required>
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
-
 
             <p class="text-muted text-center">
                 <a href="#">
@@ -57,7 +56,17 @@
 <script src="<?=asset('plugins/jquery/2.2.1/jquery.min.js')?>"></script>
 <script src="<?=asset('plugins/bootstrap/3.3.7/js/bootstrap.min.js')?>"></script>
 <script>
-
+    $('#loginForm').submit(function(){
+        var data = $(this).serialize();
+        $.post('<?= url('login')?>', data, function(res){
+            if(res.ret == 200){
+                window.location.href = '<?= url('user')?>';
+            }else{
+                alert(res.msg);
+            }
+        }, 'json');
+        return false;
+    });
 </script>
 </body>
 </html>

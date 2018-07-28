@@ -8,7 +8,7 @@
 
 return [
     'class'=>\Moon\Db\Connection::class,
-    'dsn' => 'mysql:host=localhost;dbname=test;port=3306',
+    'dsn' => 'mysql:host=localhost;dbname=weim;port=3306',
     'username' => 'root',
     'password' => 'root',
     'charset' => 'utf8mb4',

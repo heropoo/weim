@@ -7,8 +7,9 @@
  */
 namespace App\Middleware;
 
-use \Symfony\Component\HttpFoundation\Request;
-use \Closure;
+use App\Services\AuthService;
+use Symfony\Component\HttpFoundation\Request;
+use Closure;
 
 class Auth
 {
@@ -18,7 +19,7 @@ class Auth
      * @return mixed
      */
     public function handle($request, Closure $next){
-        if(empty($_SESSION['user'])){
+        if(!AuthService::isAuth()){
             return redirect('login');
         }
 
