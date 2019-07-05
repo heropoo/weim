@@ -13,16 +13,16 @@ use App\Models\User;
 
 class AuthService
 {
-    protected static $sessionKey = 'user';
+    const SESSION_KEY = 'user';
 
     public static function setUser($user)
     {
-        $_SESSION[static::$sessionKey] = $user;
+        $_SESSION[static::SESSION_KEY] = $user;
     }
 
     public static function user()
     {
-        return !empty($_SESSION[static::$sessionKey]) ? $_SESSION[static::$sessionKey] : false;
+        return !empty($_SESSION[static::SESSION_KEY]) ? $_SESSION[static::SESSION_KEY] : false;
     }
 
     public static function id()
@@ -49,18 +49,15 @@ class AuthService
                 'msg' => '密码不能为空'
             ];
         }
-        $user = User::model()->where('email=? and status=0', [$username])->fetch();
+        $user = User::model()->where('username=? and status=0', [$username])->fetch();
         if (empty($user)) {
             return [
                 'ret' => 10402,
                 'msg' => '账号不存在'
             ];
         }
-//        echo $s = static::salt();
-//        echo '<br>';
-//        echo static::encrypt($password, $s);
-        $password = static::encrypt($password, $user['salt']);
-        if (strcmp($password, $user['password']) !== 0) {
+
+        if (!static::checkPassword($password, $user['password'])) {
             return [
                 'ret' => 10403,
                 'msg' => '密码不正确'
@@ -76,12 +73,16 @@ class AuthService
 
     public static function logout()
     {
-        unset($_SESSION[static::$sessionKey]);
+        unset($_SESSION[static::SESSION_KEY]);
     }
 
-    public static function encrypt($password, $salt)
+    public static function encrypt($password)
     {
-        return md5($salt . md5($password));
+        return password_hash($password, PASSWORD_DEFAULT);
+    }
+
+    public static function checkPassword($password, $hash){
+        return password_verify($password, $hash);
     }
 
     public static function salt()

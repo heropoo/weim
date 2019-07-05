@@ -35,7 +35,7 @@
 
         <form class="m-t" role="form" action="" id="loginForm">
             <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="电子邮件地址" required>
+                <input type="text" name="username" class="form-control" placeholder="用户名" required>
             </div>
             <div class="form-group">
                 <input type="password" name="password" class="form-control" placeholder="密码" required>

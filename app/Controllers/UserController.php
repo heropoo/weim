@@ -21,9 +21,9 @@ class UserController extends Controller
     }
 
     public function post_login(){
-        $email = request('email');
+        $username = request('username');
         $password = request('password');
-        return AuthService::login($email, $password);
+        return AuthService::login($username, $password);
     }
 
     public function logout(){
@@ -36,27 +36,24 @@ class UserController extends Controller
     }
 
     public function post_register(){
-        $email = request('email', '');
-        $password = request('password', '');
-        $user = User::model()->where('email=? and status=0', [$email])->fetch();
+        $username = trim(request('username', ''));
+        $password = trim(request('password', ''));
+        $user = User::model()->where('username=? and status=0', [$username])->fetch();
         if(!empty($user)){
             return [
                 'ret'=>10010,
-                'msg'=>'当前Email已被注册'
+                'msg'=>'当前username已被注册'
             ];
         }
 
-        $salt = AuthService::salt();
-        $password = AuthService::encrypt($password, $salt);
+        $password = AuthService::encrypt($password);
 
-        $username = $nickname = strstr($email, '@', true);
+        $nickname = $username;
 
         $bool = User::model()->insert([
             'username'=>$username,
             'nickname'=>$nickname,
-            'email'=>$email,
             'password'=>$password,
-            'salt'=>$salt
         ]);
 
         if($bool){

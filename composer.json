@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "heropoo/moon": "^0.2"
+        "heropoo/moon": "*"
     },
     "autoload":{
         "psr-4":{

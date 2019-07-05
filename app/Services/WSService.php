@@ -16,7 +16,6 @@ class WSService
 {
     protected $user_list = [];
 
-
     public function run($ip, $port, $daemon = false)
     {
         $ws = new Server($ip, $port);
