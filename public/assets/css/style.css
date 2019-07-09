@@ -91,7 +91,7 @@ body {
   margin-left: 10px;
   border: 1px solid var(--light);
   background-color: var(--blue);
-  background-image: url("../images//name-type.png");
+  background-image: url("../images/name-type.png");
   background-repeat: no-repeat;
   background-position: top 12px left 14px;
   border-radius: 50%;
