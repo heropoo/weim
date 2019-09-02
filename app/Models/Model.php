@@ -1,7 +1,5 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: ttt
  * Date: 2018/7/13
  * Time: 0:06
  */
@@ -13,14 +11,21 @@ use Moon\Exception;
 
 class Model extends Table
 {
+    /** @var static $_instance */
+    private static $_instance;
+
     public function __construct($tableName = null, $db = null)
     {
-        $db = \Moon::$app->get('db');
+        $db = is_null($db) ? \Moon::$app->get('db') : $db;
         parent::__construct($tableName, $db);
     }
 
-    public static function model(){
-        return new static();
+    public static function instance()
+    {
+        if (static::$_instance instanceof static) {
+            return static::$_instance;
+        }
+        return static::$_instance = new static();
     }
 //    public static function __callStatic($name, $arguments)
 //    {

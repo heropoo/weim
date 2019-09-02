@@ -13,15 +13,11 @@ use Moon\Command;
 
 class WSServerCommand extends Command
 {
-    public function run(){
+    public function swoole(){
         $ip = '0.0.0.0';
         $port = config('ws.server.port');
         $service = new WSService();
         $service->run($ip, $port);
         return 0;
-    }
-
-    public function test(){
-        echo __METHOD__.'::test';
     }
 }

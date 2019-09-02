@@ -1,10 +1,9 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: ttt
  * Date: 2018/7/14
  * Time: 0:20
  */
+Moon::command('fmc', 'FillModelCommentCommand::run', 'Fill Model Comment');
 
-Moon::command('ws-server::run', 'WSServerCommand::run', 'Run Websocket Server');
-Moon::command('ws-server::test', 'WSServerCommand::test', 'Run Websocket Server test');
+
+Moon::command('ws-server::swoole', 'WSServerCommand::swoole', 'Run Websocket Server by Swoole');
