@@ -11,6 +11,9 @@
  */
 $router = Moon::$app->get('router');
 
+
+$router->get('test/log', 'TestController::log');
+
 $router->group(['middleware'=>\App\Middleware\SessionStart::class], function ($router){
     /**
      * @var \Moon\Routing\Router $router
