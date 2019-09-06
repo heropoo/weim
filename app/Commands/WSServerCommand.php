@@ -14,8 +14,8 @@ use Moon\Command;
 class WSServerCommand extends Command
 {
     public function swoole(){
-        $ip = '0.0.0.0';
-        $port = config('ws.server.port');
+        $host = config('server.ws.host');
+        $port = config('server.ws.port');
         $service = new WSService();
         $service->run($ip, $port);
         return 0;
