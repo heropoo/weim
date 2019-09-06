@@ -16,7 +16,7 @@ class TestController extends Controller
     public function log(){
         /** @var Logger $logger */
         $logger = \Moon::$app->get('logger');
-        $logger->error(__METHOD__.'error');
+        $logger->error(__METHOD__.'error'); //logo两次bug
         //var_dump($logger->getHandlers());
     }
 }
